@@ -19,7 +19,7 @@ public class MergeTwoSortedSingleLinkedList {
      */
 
     public Node merge(Node head1, Node head2) {
-        // 取合并后的head节点为两链表值较小的一方
+        // 取合并后的head节点为两链表头结点值较小的一方
         Node head = head1.value < head2.value ? head1 : head2;
         // cur1取被作为head节点的那条链表，称为链表1，cur2作为插入cur1的链表，称为链表2
         Node cur1 = head == head1 ? head1 : head2;

@@ -1,5 +1,8 @@
 package com.booleanchoice.exercise.designpattern;
 
+/**
+ * 单例模式
+ */
 public class SingletonTest {
 
     // 构造方法私有化
