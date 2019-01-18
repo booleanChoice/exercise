@@ -4,6 +4,7 @@
 package com.booleanchoice.exercise.stream;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
@@ -25,6 +26,18 @@ public class StreamTest {
         System.out.println(apples.get(0).getColor());
         System.out.print(apples.get(1).getTag().getTagName());
         System.out.println(00 == 0);
+
+        String val = "abcd";
+        System.out.println(val.substring(val.length() - 2));
+        Map map = new HashMap();
+        map.put("23", "!23");
+        dealMap(map);
+        System.out.println(map);
+    }
+
+    public static Map dealMap(Map map) {
+        map.put("23", "87687687");
+        return map;
     }
 
 }
