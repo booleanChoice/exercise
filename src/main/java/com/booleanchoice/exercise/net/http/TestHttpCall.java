@@ -4,8 +4,6 @@
 package com.booleanchoice.exercise.net.http;
 
 import com.alibaba.fastjson.JSON;
-import com.alibaba.fastjson.JSONObject;
-import org.apache.http.Header;
 import org.apache.http.HttpResponse;
 import org.apache.http.HttpStatus;
 import org.apache.http.client.HttpClient;
@@ -15,13 +13,10 @@ import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.params.CoreConnectionPNames;
 
 import java.io.BufferedReader;
-import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.nio.charset.Charset;
-import java.util.concurrent.Executor;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
-import java.util.concurrent.ThreadPoolExecutor;
 
 /**
  *
@@ -30,32 +25,20 @@ import java.util.concurrent.ThreadPoolExecutor;
  */
 public class TestHttpCall {
 
-    private static String url = "http://localhost:8080/invoke/executeDynamicDecision";
-    private static String param1 = JSON.parseObject("{\n"
-        + "\t\"decisionId\": \"JiebeiCreditV1\",\n"
-        + "\t\"inputs\": {\n"
-        + "\t\t\"PHONE_NO\":\"18729044748\",\"ID_CARD\":\"61012119980209673X\"\n"
-        + "\t}\n"
-        + "}").toJSONString();
-    private static String param2 = JSON.parseObject("{\n"
-        + "\t\"decisionId\": \"JBTELowAck\",\n"
-        + "\t\"inputs\": {\n"
-        + "\t\t\"PHONE_NO\":\"13606661853\",\"ID_CARD\":\"341221199007034995\"\n"
-        + "\t}\n"
-        + "}").toJSONString();
+    private static String url = "";
 
     public static void main(String[] args) {
         HttpCall httpCall = new HttpCall();
         Runnable call1 = new Runnable() {
             @Override
             public void run() {
-                System.out.println(httpCall.post(url, param1));
+                System.out.println(httpCall.post(url, null));
             }
         };
         Runnable call2 = new Runnable() {
             @Override
             public void run() {
-                System.out.println(httpCall.post(url, param2));
+                System.out.println(httpCall.post(url, null));
             }
         };
         ExecutorService executorService = Executors.newCachedThreadPool();

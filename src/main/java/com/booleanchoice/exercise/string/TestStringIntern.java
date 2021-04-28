@@ -10,6 +10,8 @@ package com.booleanchoice.exercise.string;
  */
 public class TestStringIntern {
 
+    private static final String CONNECTOR = ".";
+
     public static void main(String[] args) {
 
         String a = "11";
@@ -29,14 +31,29 @@ public class TestStringIntern {
 
         String f = "1122";
 
-        Integer haha = null;
-        if (haha == 2) {
-            System.out.println("1234");
-        } else {
-            System.out.println("2333");
-        }
 
         System.out.println(f == e);
+
+        String haha = "a".concat(CONNECTOR).concat("b");
+        String[] xixi = haha.split("\\" + CONNECTOR);
+        System.out.println(xixi[1]);
+
+
+        String decisionId= "bcd__dcsBean_abc_dcsBean";
+        String decisionBeanSuffix = "_dcsBean";
+
+        decisionId = decisionId.substring(0, decisionId.lastIndexOf(decisionBeanSuffix));
+
+        System.out.println("decisionId :" + decisionId);
+
+
+        Object test = null;
+
+        String aaa = (String) test;
+        System.out.println(aaa);
+        if (!(test instanceof String)) {
+            System.out.println(test);
+        }
 
     }
 

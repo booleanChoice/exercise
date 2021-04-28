@@ -30,7 +30,7 @@ public class TestThreadNotice {
         Printer a = new Printer("A", 10, as, bs);
         Printer b = new Printer("B", 10, bs, cs);
         Printer c = new Printer("C", 10, cs, as);
-        Executor executor = new ThreadPoolExecutor(3, 3, 1000, TimeUnit.SECONDS, new LinkedBlockingDeque<>());
+        Executor executor = new ThreadPoolExecutor(3, 3, 1000, TimeUnit.SECONDS, new LinkedBlockingDeque());
         executor.execute(a);
         executor.execute(b);
         executor.execute(c);
