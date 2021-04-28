@@ -1,4 +1,4 @@
-package com.booleanchoice.exercise.linkedlist;
+package com.booleanchoice.exercise.algorithm.linkedlist;
 
 /**
  * 合并两个有序的单链表

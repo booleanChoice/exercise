@@ -1,4 +1,4 @@
-package com.booleanchoice.exercise.linkedlist;
+package com.booleanchoice.exercise.algorithm.linkedlist;
 
 /**
  * Leetcode 2: 两数相加

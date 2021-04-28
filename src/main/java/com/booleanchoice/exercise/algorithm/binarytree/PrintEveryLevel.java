@@ -1,4 +1,4 @@
-package com.booleanchoice.exercise.binarytree;
+package com.booleanchoice.exercise.algorithm.binarytree;
 
 import java.util.LinkedList;
 import java.util.Queue;

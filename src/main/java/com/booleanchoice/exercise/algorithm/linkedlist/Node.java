@@ -1,10 +1,9 @@
-package com.booleanchoice.exercise.binarytree;
+package com.booleanchoice.exercise.algorithm.linkedlist;
 
 public class Node {
 
     public int value;
-    public Node left;
-    public Node right;
+    public Node next;
 
     public Node(int data) {
         this.value = data;

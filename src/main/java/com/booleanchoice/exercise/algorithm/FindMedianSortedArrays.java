@@ -1,7 +1,7 @@
 /**
  * Alipay.com Inc. Copyright (c) 2004-2018 All Rights Reserved.
  */
-package com.booleanchoice.exercise;
+package com.booleanchoice.exercise.algorithm;
 
 
 
@@ -27,8 +27,6 @@ package com.booleanchoice.exercise;
  *
  * 则中位数是 (2 + 3)/2 = 2.5
  */
-
-import com.booleanchoice.exercise.sort.MergeTwoSortedArray;
 
 /**
  *

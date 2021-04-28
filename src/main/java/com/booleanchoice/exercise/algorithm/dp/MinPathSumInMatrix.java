@@ -1,4 +1,4 @@
-package com.booleanchoice.exercise.dp;
+package com.booleanchoice.exercise.algorithm.dp;
 
 
 /**

@@ -1,4 +1,4 @@
-package com.booleanchoice.exercise.sort;
+package com.booleanchoice.exercise.algorithm.sort;
 
 /**
  * @author liujianzhao

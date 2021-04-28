@@ -1,4 +1,4 @@
-package com.booleanchoice.exercise.stack;
+package com.booleanchoice.exercise.algorithm.stack;
 
 import java.util.Stack;
 

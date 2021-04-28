@@ -1,4 +1,4 @@
-package com.booleanchoice.exercise.sort;
+package com.booleanchoice.exercise.algorithm.sort;
 
 /**
  * 归并排序，体现了分治法的思想：即分而治之，

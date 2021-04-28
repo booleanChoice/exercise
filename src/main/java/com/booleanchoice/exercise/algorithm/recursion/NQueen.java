@@ -1,4 +1,4 @@
-package com.booleanchoice.exercise.recursion;
+package com.booleanchoice.exercise.algorithm.recursion;
 
 /**
  * n皇后问题：
