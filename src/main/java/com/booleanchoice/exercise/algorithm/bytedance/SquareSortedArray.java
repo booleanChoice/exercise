@@ -47,6 +47,7 @@ public class SquareSortedArray {
             int squared = num * num;
 
         }
+        int a = 1;
         return null;
     }
 
