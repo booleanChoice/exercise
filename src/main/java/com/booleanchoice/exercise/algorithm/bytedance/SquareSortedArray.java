@@ -23,6 +23,13 @@ package com.booleanchoice.exercise.algorithm.bytedance;
  * [-7,-3,2,3,11]
  * 输出：
  * [4,9,9,49,121]
+ *
+ * 思路：
+ * 输入数组内部平方后，都为正整数或0，故排序只需要看内部数的绝对值
+ * 而且输入数组是有序数组，说明内部从0开始，负数从左到右逐渐增大，正数从右到左逐渐增大
+ * 故首先分别从输入数组最左和最右记录索引
+ * 比较最左和最右的绝对值大小，较大的那个就是平方后最大的数
+ * 并不断把指针向中间收敛
  */
 public class SquareSortedArray {
 
@@ -32,23 +39,22 @@ public class SquareSortedArray {
      */
     public int[] SquareArray(int[] A) {
         // write your code here
-        if (null == A) {
-            return null;
-        }
         int[] rs = new int[A.length];
-        if (A.length == 0) {
-            return rs;
-        }
         int leftIdx = 0;
         int rightIdx = A.length - 1;
-        for (int i = 0; i < A.length; i++) {
-            int num = A[i];
 
-            int squared = num * num;
-
+        for (int i = A.length - 1; i >= 0; i--) {
+            if (Math.abs(A[leftIdx]) < Math.abs(A[rightIdx])) {
+                int num = A[rightIdx] * A[rightIdx];
+                rs[i] = num;
+                rightIdx--;
+            } else {
+                int num = A[leftIdx] * A[leftIdx];
+                rs[i] = num;
+                leftIdx++;
+            }
         }
-        return null;
+        return rs;
     }
-
 
 }
