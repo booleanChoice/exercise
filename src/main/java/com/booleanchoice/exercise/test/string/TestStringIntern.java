@@ -1,7 +1,7 @@
 /**
  * Alipay.com Inc. Copyright (c) 2004-2019 All Rights Reserved.
  */
-package com.booleanchoice.exercise.string;
+package com.booleanchoice.exercise.test.string;
 
 /**
  *

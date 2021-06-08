@@ -15,8 +15,9 @@ public class QuickSort {
             int x = s[l], i = l, j = r;
             while (i < j) {
                 // 挑一个右边比基准数小的数，放在"坑中"
-                while (i < j && s[j] >= x)
+                while (i < j && s[j] >= x) {
                     j--;
+                }
                 if (i < j) {
                     // ***把该数放在放在"坑中"，此时坑变为了s[j]的位置
                     s[i] = s[j];
@@ -24,8 +25,9 @@ public class QuickSort {
                     i++;
                 }
                 // 挑一个左边比基准数大的数，放在"坑中"
-                while (i < j && s[i] < x)
+                while (i < j && s[i] < x) {
                     i++;
+                }
                 if (i < j) {
                     // ***把该数放在放在"坑中"，此时坑变为了s[i]的位置
                     s[j] = s[i];

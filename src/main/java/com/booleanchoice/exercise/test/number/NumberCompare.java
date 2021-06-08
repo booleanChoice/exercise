@@ -1,6 +1,4 @@
-package com.booleanchoice.exercise.number;
-
-import java.util.*;
+package com.booleanchoice.exercise.test.number;
 
 public class NumberCompare {
     static Long a = 999999999999999999L;
