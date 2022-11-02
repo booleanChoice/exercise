@@ -2,7 +2,7 @@ package com.booleanchoice.exercise.test;
 
 public class P {
 
-    private int a;
+    private Integer a;
 
     public P(int a) {
         this.a = a;

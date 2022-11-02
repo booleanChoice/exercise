@@ -6,15 +6,17 @@ public class Main
     public static void main(String[] args) {
         changeVal(p);
         p.out();
-        changeRef(p);
+        p = changeRef(p);
         p.out();
     }
 
     private static void changeVal(P p) {
-        p.setA(345);
+        Integer integer = new Integer(345);
+        p.setA(integer);
     }
 
-    private static void changeRef(P p) {
+    private static P changeRef(P p) {
         p = new P(456);
+        return p;
     }
 }

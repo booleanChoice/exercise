@@ -3,10 +3,8 @@
  */
 package com.booleanchoice.exercise.concurrent.notice;
 
-import sun.jvm.hotspot.debugger.ThreadAccess;
 
 import java.util.concurrent.*;
-import java.util.concurrent.atomic.AtomicInteger;
 
 /**
  *
