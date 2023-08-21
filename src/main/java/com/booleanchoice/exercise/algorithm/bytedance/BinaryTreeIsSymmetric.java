@@ -16,10 +16,40 @@ import com.booleanchoice.exercise.algorithm.binarytree.TreeNode;
  * 输入：root = [1,2,2,null,3,null,3]
  * 输出：false
  *
+ * 提示：
+ *
+ * 树中节点数目在范围 [1, 1000] 内
+ * -100 <= Node.val <= 100
+ *
+ *
+ * 进阶：你可以运用递归和迭代两种方法解决这个问题吗？
+ *
  */
 public class BinaryTreeIsSymmetric {
 
     public boolean isSymmetric(TreeNode root) {
-        return false;
+        return check(root.left, root.right);
     }
+
+    public boolean check(TreeNode a, TreeNode b) {
+
+        if (a == null && b != null || a != null && b == null) {
+            return false;
+        }
+
+        if (a != null && b != null) {
+            if (a.val != b.val) {
+                return false;
+            }
+            if (!check(a.left, b.right)) {
+                return false;
+            }
+            if (!check(a.right, b.left)) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+
 }
