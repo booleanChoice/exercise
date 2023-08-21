@@ -8,14 +8,14 @@ import java.util.Queue;
  */
 public class PrintEveryLevel {
 
-    public void print(Node head) {
+    public void print(TreeNode head) {
         if (head == null) {
             return;
         }
-        Queue<Node> queue = new LinkedList<>();
+        Queue<TreeNode> queue = new LinkedList<>();
         queue.offer(head);
-        Node last = head;
-        Node nLast = null;
+        TreeNode last = head;
+        TreeNode nLast = null;
         int level = 1;
         System.out.print("Level " + level++ + " : ");
         while (!queue.isEmpty()) {

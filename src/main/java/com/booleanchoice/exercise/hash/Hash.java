@@ -41,8 +41,14 @@ public class Hash {
 
 
     public static void main(String args[]) throws Exception {
-        File file = new File("");
-        System.out.println(getFileMD5String(file));
+
+        System.out.println("BBBBBBBBBB".hashCode());
+        System.out.println(hash("BBBBBBBBBB"));
+    }
+
+    private static int hash(String key) {
+        int h;
+        return (key == null) ? 0 : ((h = key.hashCode()) ^ (h >>> 16)) & 0x7fffffff;
     }
 
 }

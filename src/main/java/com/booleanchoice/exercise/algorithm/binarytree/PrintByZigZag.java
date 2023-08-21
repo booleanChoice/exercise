@@ -8,21 +8,21 @@ import java.util.*;
  */
 public class PrintByZigZag {
 
-    public void print(Node head) {
+    public void print(TreeNode head) {
 
         if (head == null) {
             return;
         }
         // 双端队列
-        Deque<Node> dq = new LinkedList<>();
+        Deque<TreeNode> dq = new LinkedList<>();
         // 打印层数，初始为1
         int level = 1;
         // 打印方向，从左到右为true，从右到左为false
         boolean lr = true;
         // 每层的最后一个节点，第一层即为head，所以此处初始化为head
-        Node last = head;
+        TreeNode last = head;
         // 下一层的最后一个节点
-        Node nLast = null;
+        TreeNode nLast = null;
         // 先把第一个节点从头部放入队列
         dq.offerFirst(head);
         // 打印第一层层数信息和方向，并层数加一
