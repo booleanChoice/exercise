@@ -20,7 +20,7 @@ public class PrintEveryLevel {
         System.out.print("Level " + level++ + " : ");
         while (!queue.isEmpty()) {
             head = queue.poll();
-            System.out.print(head.value + " ");
+            System.out.print(head.val + " ");
             if (head.left != null) {
                 queue.offer(head.left);
                 nLast = head.left;

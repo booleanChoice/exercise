@@ -56,7 +56,7 @@ public class PrintByZigZag {
                 }
             }
             // 打印当前节点值
-            System.out.print(head.value + " ");
+            System.out.print(head.val + " ");
             // 打印到了最后的节点，该进行下层循环了，做一些标志的转移
             if (head == last && !dq.isEmpty()) {
                 // 改变打印方向
