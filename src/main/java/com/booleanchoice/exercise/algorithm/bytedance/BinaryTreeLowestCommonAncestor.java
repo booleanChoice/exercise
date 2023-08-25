@@ -4,6 +4,8 @@
  */
 package com.booleanchoice.exercise.algorithm.bytedance;
 
+import com.booleanchoice.exercise.algorithm.binarytree.TreeNode;
+
 /**
  * 236. 二叉树的最近公共祖先
  * 给定一个二叉树, 找到该树中两个指定节点的最近公共祖先。
@@ -36,4 +38,32 @@ package com.booleanchoice.exercise.algorithm.bytedance;
  * p 和 q 均存在于给定的二叉树中。
  */
 public class BinaryTreeLowestCommonAncestor {
+    public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
+        return recursionSearch(root, p, q);
+    }
+
+    public TreeNode recursionSearch(TreeNode node, TreeNode p, TreeNode q) {
+        if (node == null) {
+            return null;
+        }
+        if (node == p || node == q) {
+            return node;
+        }
+        TreeNode l = recursionSearch(node.left, p, q);
+        TreeNode r = recursionSearch(node.right, p, q);
+
+        if (l != null && r != null) {
+            return node;
+        }
+
+        if (l == null && r != null) {
+            return r;
+        }
+
+        if (l != null && r == null) {
+            return l;
+        }
+        return null;
+    }
+
 }
