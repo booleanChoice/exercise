@@ -6,13 +6,14 @@ package com.booleanchoice.exercise.algorithm.binarytree;
 
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Queue;
 import java.util.Stack;
 
 /**
  * @author booleanchoice
  * @version DFS.java, v 0.1 2023年08月23日 14:12 booleanchoice
  */
-public class DFS {
+public class DFS_BFS {
 
     /**
      * 非递归实现
@@ -52,6 +53,25 @@ public class DFS {
         rs.add(treeNode.val);
         dfsRecursion(rs, treeNode.left);
         dfsRecursion(rs, treeNode.right);
+    }
+
+    public List<Integer> bfs(TreeNode treeNode) {
+        List<Integer> rs = new LinkedList<>();
+        Queue<TreeNode> queue = new LinkedList<>();
+        queue.add(treeNode);
+        while (!queue.isEmpty()) {
+            TreeNode node =  queue.poll();
+            if (node != null) {
+                if (node.left != null) {
+                    queue.add(node.left);
+                }
+                if (node.right != null) {
+                    queue.add(node.right);
+                }
+                rs.add(node.val);
+            }
+        }
+        return rs;
     }
 
 }
